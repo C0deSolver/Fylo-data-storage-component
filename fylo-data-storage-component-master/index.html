@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container grid">
+      <div class="fylo-box">
+        <img class="logo" src="images/logo.svg" alt="Fylo logo" />
+        <ul class="list">
+          <li>
+            <img src="images/icon-document.svg" alt="document icon" />
+          </li>
+          <li>
+            <img src="images/icon-folder.svg" alt="folder icon" />
+          </li>
+          <li><img src="images/icon-upload.svg" alt="upload icon" /></li>
+        </ul>
+      </div>
+      <div class="storage-box">
+        <p class="storage-text">
+          You’ve used <span class="bold">815 GB</span> of your storage
+        </p>
+        <span class="storage-bar"
+          ><span><div></div></span
+        ></span>
+        <div class="storage-0-1000">
+          <p class="storage-0GB bold">0 GB</p>
+          <p class="storage-1000GB bold">1000 GB</p>
+        </div>
+        <div class="bubble-container">
+          <div class="bubble">
+            <p><span>185</span> gb left</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">C0deSolver</a>.
+    </footer>
+  </body>
+</html>

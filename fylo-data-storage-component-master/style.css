@@ -1,0 +1,226 @@
+/*
+## Layout
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+
+### Neutral
+
+- Pale Blue: hsl(243, 100%, 93%)
+- Grayish Blue: hsl(229, 7%, 55%)
+- Dark Blue: hsl(228, 56%, 26%)
+- Very Dark Blue: hsl(229, 57%, 11%)
+
+### Body Copy
+
+- Font size: 14px
+
+### Font
+
+- Family: [Raleway](https://fonts.google.com/specimen/Raleway)
+- Weights: 400, 700
+*/
+
+/**********************************************************************/
+/* GENERAL SETTINGS
+/**********************************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  line-height: 1;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: hsl(243, 100%, 93%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: unset;
+  align-items: center;
+  justify-content: center;
+
+  background: #0c122c url("../../images/bg-desktop.png") no-repeat bottom;
+  background-size: 100% 50%;
+}
+
+/**********************************************************************/
+/* MAIN SECTION
+/**********************************************************************/
+
+.container {
+  /* position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  padding: 5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 200fr 540fr;
+  column-gap: 3rem;
+}
+
+.fylo-box {
+  padding: 4rem;
+  background-color: hsl(228, 56%, 26%);
+  grid-row: 1 / -1;
+  grid-column: 1 / 2;
+  border-radius: 15px;
+  border-top-right-radius: 100px;
+}
+
+.logo {
+  margin-bottom: 3rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.list li {
+  display: inline-block;
+  background-color: hsl(229, 57%, 11%);
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.storage-box {
+  padding: 4rem;
+  background-color: hsl(228, 56%, 26%);
+  grid-row: 2 / -1;
+  grid-column: 2 / 3;
+  border-radius: 15px;
+}
+
+.storage-text {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.storage-bar {
+  display: block;
+  height: 1.7rem;
+  background-color: hsl(229, 57%, 11%);
+  border: 2px solid hsl(229, 57%, 11%);
+  border-radius: 100px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.storage-bar span {
+  height: 1.3rem;
+  float: left;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  width: 81.5%;
+  border-radius: 100px;
+}
+
+.storage-bar span div {
+  background: #fff;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100px;
+  float: right;
+  margin: 1px 2px;
+}
+
+.storage-0-1000 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+.bubble-container {
+  position: absolute;
+}
+
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background: #fff;
+  color: hsl(229, 7%, 55%);
+  text-align: center;
+  width: 20rem;
+  height: 8rem;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  padding: 0px;
+  left: 0;
+  transform: translate(+100%, -200%);
+}
+
+.bubble p {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.bubble span {
+  font-size: 3rem;
+}
+
+/**********************************************************************/
+/* FOOTER SECTION
+/**********************************************************************/
+
+.attribution {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 700px) {
+  body {
+    background: #0c122c url("../../images/bg-desktop.png") no-repeat bottom;
+    background-size: cover;
+  }
+
+  .grid {
+    /* grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .bubble {
+    width: 15rem;
+    height: 6rem;
+    transform: translate(+25%, +20%);
+    border-bottom-right-radius: 10px;
+  }
+}
